@@ -249,6 +249,7 @@ if __name__ == '__main__':
         # current wavs working with (train)
         working_train_dir = target_wavpath_train
         for spk in tqdm(speaker_dirs):
+            print(spk_dir)
             spk_dir = os.path.join(working_train_dir, spk)
             futures.append(executer.submit(partial(process_spk, spk_dir, mc_dir_train)))
 
